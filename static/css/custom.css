@@ -8,3 +8,111 @@
 .box-simple {
   min-height: 230px;
 }
+
+.testimonials .item .testimonial .name-picture img {
+  margin-bottom: 10px;
+}
+
+.bar.bar-skinny {
+  margin-bottom: 0;
+  padding-top: 0;
+}
+
+.bar.bar-slim {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.bar.hero {
+  background: url('../img/texture-bw.png') repeat;
+  height: 20em;
+  padding: 0;
+  position: relative;
+}
+
+.bar.hero .dark-mask {
+  content: " ";
+  po
+}
+
+.bar.hero .container, .bar.hero .row, .bar.hero .col-md-12 {
+  height: 100%;
+}
+
+.bar.hero h3 {
+  bottom: 0;
+  margin-bottom: -0.22em;
+  position: absolute;
+  font-size: 10.3em;
+}
+
+.box-simple h3 {
+  color: #fff;
+  font-size: 3em;
+  margin-left: 0.5em;
+  margin-top: -1.08em;
+}
+
+.box-simple img {
+  max-width: 100%;
+}
+
+#heading-breadcrumbs {
+  padding: 20px 0 0;
+  position: relative;
+}
+
+#heading-breadcrumbs:before {
+  background: rgba(0,0,0,0.2);
+  content: " ";
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+#heading-breadcrumbs h1 {
+  color: #fff;
+  font-size: 5em;
+  margin-bottom: -0.22em;
+}
+
+#message {
+  min-height: 16em;
+}
+
+@media (max-width: 1365px) {
+  .bar.hero h3 {
+    font-size: 8.4em;
+  }
+
+  .box-simple h3 {
+    font-size: 2.5em;
+    margin-top: -1.05em;
+  }
+}
+
+@media (max-width: 1023px) {
+  .bar.hero h3 {
+    font-size: 7em;
+  }
+}
+
+@media (max-width: 799px) {
+  .bar.hero h3 {
+    font-size: 5em;
+  }
+}
+
+@media (max-width: 670px) {
+  .bar.hero h3 {
+    font-size: 4em;
+  }
+}
+
+@media (max-width: 480px) {
+  .bar.hero h3 {
+    font-size: 3.5em;
+  }
+}

@@ -26,8 +26,16 @@
                                 <div class="icon"><i class="fa fa-quote-left"></i>
                                 </div>
                                 <div class="name-picture">
-                                    <img class="" alt="" src="{{ .avatar | absURL }}">
-                                    <h5>{{ .name }}</h5>
+                                    {{ if .url }}
+                                        <a href="{{ .url }}" target="_blank"><img class="" alt="" src="{{ .avatar | absURL }}" {{ if or (.avatar_2x) (.avatar_3x) }}srcset="{{ if .avatar_2x }}{{ .avatar_2x | absURL}} 2x{{ end }}{{ if and (.avatar_2x) (.avatar_3x) }}, {{ end }}{{ if .avatar_3x }}{{ .avatar_3x | absURL}} 3x{{ end }}"{{ end }} /></a>
+                                    {{ else }}
+                                        <img class="" alt="" src="{{ .avatar | absURL }}" {{ if or (.avatar_2x) (.avatar_3x) }}srcset="{{ if .avatar_2x }}{{ .avatar_2x | absURL}} 2x{{ end }}{{ if and (.avatar_2x) (.avatar_3x) }}, {{ end }}{{ if .avatar_3x }}{{ .avatar_3x | absURL}} 3x{{ end }}"{{ end }} />
+                                    {{ end }}
+                                    <h5>{{ if .url }}
+                                            <a href="{{ .url }}" target="_blank">{{ .name }}</a>
+                                        {{ else }}
+                                            {{ .name }}
+                                        {{ end }}</h5>
                                     <p>{{ .position }}</p>
                                 </div>
                             </div>

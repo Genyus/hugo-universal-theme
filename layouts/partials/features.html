@@ -1,8 +1,13 @@
 {{ if isset .Site.Params "features" }}
 {{ if .Site.Params.features.enable }}
 {{ if gt (len .Site.Data.features) 0 }}
-<section class="bar background-white">
+<section class="bar bar-slim background-white">
     <div class="container">
+        <div class="col-sm-12">
+            <div class="heading">
+                <h3>What I do</h3>
+            </div>
+        </div>
         {{ range $index, $element := sort .Site.Data.features "weight" }}
 		{{ if eq (mod $index 3) 0 }}
 		<div class="col-md-12">
@@ -10,9 +15,7 @@
 		{{ end }}
 				<div class="col-md-4">
                     <div class="box-simple">
-                        <div class="icon">
-                            <i class="{{ .icon }}"></i>
-                        </div>
+                            <img class="" alt="" src="{{ .image | absURL }}" {{ if or (.image_2x) (.image_3x) }}srcset="{{ if .image_2x }}{{ .image_2x | absURL}} 2x{{ end }}{{ if and (.image_2x) (.image_3x) }}, {{ end }}{{ if .image_3x }}{{ .image_3x | absURL}} 3x{{ end }}"{{ end }} />
                         <h3>{{ $element.name }}</h3>
                         <p>{{ $element.description | markdownify }}</p>
                     </div>
@@ -25,5 +28,8 @@
     </div>
 </section>
 {{ end }}
+<section class="bar bar-skinny background-white text-center">
+    <a href="/contact/" class="btn btn-template-main btn-lg">Work with me</a>
+</section>
 {{ end }}
 {{ end }}

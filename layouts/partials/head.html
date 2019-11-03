@@ -32,18 +32,10 @@
   {{ $custom := resources.Get "css/custom.css" }}
   {{ $owlCarousel := resources.Get "css/owl.carousel.css" }}
   {{ $owlTheme := resources.Get "css/owl.theme.css" }}
-  {{ $style := slice $roboto $fontAwesome $bootstrap $animate $base $custom $owlCarousel $owlTheme | resources.Concat "css/global.css" | minify | fingerprint }} 
+  {{ $style := slice $roboto $bootstrap $animate $base $custom $owlCarousel $owlTheme | resources.Concat "css/global.css" | minify }} 
 <link rel="stylesheet"
       href="{{ $style.RelPermalink }}"
       integrity="{{ $style.Data.Integrity }}">
-
-  <!-- Theme stylesheet, if possible do not edit this stylesheet -->
-  <!--{{ if and (isset .Site.Params "style") .Site.Params.style }}
-    <link href="{{ "css/style" | relURL}}.{{ .Site.Params.style }}.css" rel="stylesheet" id="theme-stylesheet">
-  {{ else }}
-    <link href="{{ "css/style.default.css" | relURL}}" rel="stylesheet" id="theme-stylesheet">
-  {{ end }}
-  -->
 
 
   <!-- Responsivity for older IE -->

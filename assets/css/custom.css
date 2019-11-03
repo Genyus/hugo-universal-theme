@@ -32,23 +32,22 @@
 
 .bar.hero .dark-mask {
   content: " ";
-  po
 }
 
 .bar.hero .container, .bar.hero .row, .bar.hero .col-md-12 {
   height: 100%;
 }
 
-.bar.hero h3 {
-  bottom: 0;
-  margin-bottom: -0.22em;
+.bar.hero h1 {
+  bottom: -0.2em;
+  margin-bottom: 0;
   position: absolute;
-  font-size: 10.3em;
+  font-size: 5em;
 }
 
 .box-simple h3 {
   color: #fff;
-  font-size: 3em;
+  font-size: 2.5em;
   margin-top: -1.08em;
 }
 
@@ -72,46 +71,24 @@
 }
 
 #heading-breadcrumbs h1 {
+  bottom: -0.5em;
   color: #fff;
   font-size: 5em;
-  margin-bottom: -0.22em;
+  position: relative;
 }
 
 #message {
   min-height: 16em;
 }
 
-@media (max-width: 1365px) {
-  .bar.hero h3 {
-    font-size: 8.4em;
-  }
-
-  .box-simple h3 {
-    font-size: 2.5em;
-    margin-top: -1.05em;
+@media (max-width: 375px) {
+  .bar.hero h1 {
+    font-size: 4.5em;
   }
 }
 
-@media (max-width: 1023px) {
-  .bar.hero h3 {
-    font-size: 7em;
-  }
-}
-
-@media (max-width: 799px) {
-  .bar.hero h3 {
-    font-size: 5em;
-  }
-}
-
-@media (max-width: 670px) {
-  .bar.hero h3 {
+@media (max-width: 320px) {
+  .bar.hero h1 {
     font-size: 4em;
-  }
-}
-
-@media (max-width: 480px) {
-  .bar.hero h3 {
-    font-size: 3.5em;
   }
 }

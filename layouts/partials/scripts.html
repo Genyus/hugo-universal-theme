@@ -1,21 +1,3 @@
-{{ template "_internal/google_analytics.html" . }}
-{{ if .Site.Params.googleMapsApiKey }}
-<script src="//maps.googleapis.com/maps/api/js?key={{.Site.Params.googleMapsApiKey}}&v=3.exp"></script>
-{{ end }}
-
-{{ $jquery := resources.Get "js/jquery-3.1.1.min.js" }}
-{{ $bootstrap := resources.Get "js/bootstrap-3.3.7.min.js" }}
-{{ $cookie := resources.Get "js/jquery.cookie-1.4.1.min.js" }}
-{{ $waypoints := resources.Get "js/jquery.waypoints-4.0.1.min.js" }}
-{{ $counterup := resources.Get "js/jquery.counterup-1.0.min.js" }}
-{{ $parallax := resources.Get "js/jquery.parallax-1.1.3.js" }}
-<!--{{ $hpneo := resources.Get "js/hpneo.gmaps.js" }}
-{{ $gmaps := resources.Get "js/gmaps.init.js" }}-->
-{{ $front := resources.Get "js/front.js" }}
-{{ $owlCarousel := resources.Get "js/owl.carousel.min.js" }}
-{{ $script := slice $jquery $bootstrap $cookie $waypoints $counterup $parallax $front $owlCarousel | resources.Concat "js/global.js" | minify }} 
-<script src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}"></script>
-
 {{ $styleName := "default" }}
 {{ if and (isset .Site.Params "style") .Site.Params.style }}
   {{ $styleName = .Site.Params.style }}
@@ -32,4 +14,21 @@
 <link rel="stylesheet"
     href="{{ $style.RelPermalink }}"
     integrity="{{ $style.Data.Integrity }}">
-    
+
+{{ template "_internal/google_analytics.html" . }}
+{{ if .Site.Params.googleMapsApiKey }}
+<script src="//maps.googleapis.com/maps/api/js?key={{.Site.Params.googleMapsApiKey}}&v=3.exp"></script>
+{{ end }}
+
+{{ $jquery := resources.Get "js/jquery-3.1.1.min.js" }}
+{{ $bootstrap := resources.Get "js/bootstrap-3.3.7.min.js" }}
+{{ $cookie := resources.Get "js/jquery.cookie-1.4.1.min.js" }}
+{{ $waypoints := resources.Get "js/jquery.waypoints-4.0.1.min.js" }}
+{{ $counterup := resources.Get "js/jquery.counterup-1.0.min.js" }}
+{{ $parallax := resources.Get "js/jquery.parallax-1.1.3.js" }}
+<!--{{ $hpneo := resources.Get "js/hpneo.gmaps.js" }}
+{{ $gmaps := resources.Get "js/gmaps.init.js" }}-->
+{{ $front := resources.Get "js/front.js" }}
+{{ $owlCarousel := resources.Get "js/owl.carousel.min.js" }}
+{{ $script := slice $jquery $bootstrap $cookie $waypoints $counterup $parallax $front $owlCarousel | resources.Concat "js/global.js" | minify }} 
+<script src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" async></script>

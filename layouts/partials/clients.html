@@ -18,10 +18,10 @@
                     <li class="item" title="{{ .name }}">
                         {{ if .url }}
                           <a href="{{ .url }}" target="_blank">
-                            <img src="{{ .image }}" srcset="{{ if .image_2x }}{{ .image_2x}} 2x{{ end }}{{ if and (.image_2x) (.image_3x) }}, {{ end }}{{ if .image_3x }}{{ .image_3x}} 3x{{ end }}" alt="{{ .name }}" class="img-responsive" />
+                            <img src="{{ .image }}" srcset="{{ if .image_2x }}{{ .image_2x}} 2x{{ end }}{{ if and (.image_2x) (.image_3x) }}, {{ end }}{{ if .image_3x }}{{ .image_3x}} 3x{{ end }}" alt="{{ .name }}" class="img-responsive" height="84" width="150" />
                           </a>
                         {{ else }}
-                          <img src="{{ .image }}" srcset="{{ if .image_2x }}{{ .image_2x}} 2x{{ end }}{{ if and (.image_2x) (.image_3x) }}, {{ end }}{{ if .image_3x }}{{ .image_3x}} 3x{{ end }}" alt="{{ .name }}" class="img-responsive" />
+                          <img src="{{ .image }}" srcset="{{ if .image_2x }}{{ .image_2x}} 2x{{ end }}{{ if and (.image_2x) (.image_3x) }}, {{ end }}{{ if .image_3x }}{{ .image_3x}} 3x{{ end }}" alt="{{ .name }}" class="img-responsive" height="84" width="150" />
                         {{ end }}
                     </li>
                     {{ end }}

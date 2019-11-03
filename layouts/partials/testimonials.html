@@ -27,9 +27,9 @@
                                 </div>
                                 <div class="name-picture">
                                     {{ if .url }}
-                                        <a href="{{ .url }}" target="_blank"><img class="" alt="" src="{{ .avatar | absURL }}" {{ if or (.avatar_2x) (.avatar_3x) }}srcset="{{ if .avatar_2x }}{{ .avatar_2x | absURL}} 2x{{ end }}{{ if and (.avatar_2x) (.avatar_3x) }}, {{ end }}{{ if .avatar_3x }}{{ .avatar_3x | absURL}} 3x{{ end }}"{{ end }} /></a>
+                                        <a href="{{ .url }}" target="_blank"><img class="" alt="" src="{{ .avatar | absURL }}" {{ if or (.avatar_2x) (.avatar_3x) }}srcset="{{ if .avatar_2x }}{{ .avatar_2x | absURL}} 2x{{ end }}{{ if and (.avatar_2x) (.avatar_3x) }}, {{ end }}{{ if .avatar_3x }}{{ .avatar_3x | absURL}} 3x{{ end }}"{{ end }} height="60" width="60" /></a>
                                     {{ else }}
-                                        <img class="" alt="" src="{{ .avatar | absURL }}" {{ if or (.avatar_2x) (.avatar_3x) }}srcset="{{ if .avatar_2x }}{{ .avatar_2x | absURL}} 2x{{ end }}{{ if and (.avatar_2x) (.avatar_3x) }}, {{ end }}{{ if .avatar_3x }}{{ .avatar_3x | absURL}} 3x{{ end }}"{{ end }} />
+                                        <img class="" alt="" src="{{ .avatar | absURL }}" {{ if or (.avatar_2x) (.avatar_3x) }}srcset="{{ if .avatar_2x }}{{ .avatar_2x | absURL}} 2x{{ end }}{{ if and (.avatar_2x) (.avatar_3x) }}, {{ end }}{{ if .avatar_3x }}{{ .avatar_3x | absURL}} 3x{{ end }}"{{ end }} height="60" width="60" />
                                     {{ end }}
                                     <h5>{{ if .url }}
                                             <a href="{{ .url }}" target="_blank">{{ .name }}</a>

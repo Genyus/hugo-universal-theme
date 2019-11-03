@@ -32,7 +32,7 @@
   {{ $custom := resources.Get "css/custom.css" }}
   {{ $owlCarousel := resources.Get "css/owl.carousel.css" }}
   {{ $owlTheme := resources.Get "css/owl.theme.css" }}
-  {{ $style := slice $roboto $fontAwesome $bootstrap $animate $base $custom $owlCarousel $owlTheme | resources.Concat "css/global.css" | resources.Minify | fingerprint }} 
+  {{ $style := slice $roboto $fontAwesome $bootstrap $animate $base $custom $owlCarousel $owlTheme | resources.Concat "css/global.css" | minify | fingerprint }} 
 <link rel="stylesheet"
       href="{{ $style.RelPermalink }}"
       integrity="{{ $style.Data.Integrity }}">

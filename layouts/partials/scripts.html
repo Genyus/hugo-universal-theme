@@ -15,3 +15,21 @@
 {{ $owlCarousel := resources.Get "js/owl.carousel.min.js" }}
 {{ $script := slice $jquery $bootstrap $cookie $waypoints $counterup $parallax $front $owlCarousel | resources.Concat "js/global.js" | minify }} 
 <script src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}"></script>
+
+{{ $styleName := "default" }}
+{{ if and (isset .Site.Params "style") .Site.Params.style }}
+  {{ $styleName = .Site.Params.style }}
+{{ end }}
+{{ $roboto := resources.Get "css/roboto.css" }}
+{{ $fontAwesome := resources.Get "css/font-awesome-4.7.0.min.css" }}
+{{ $bootstrap := resources.Get "css/bootstrap-3.3.7.min.css" }}
+{{ $animate := resources.Get "css/animate.css" }}
+{{ $base := resources.Get (printf "css/style.%s.css" $styleName ) }}
+{{ $custom := resources.Get "css/custom.css" }}
+{{ $owlCarousel := resources.Get "css/owl.carousel.css" }}
+{{ $owlTheme := resources.Get "css/owl.theme.css" }}
+{{ $style := slice $roboto $fontAwesome $bootstrap $animate $base $custom $owlCarousel $owlTheme | resources.Concat "css/global.css" | minify }} 
+<link rel="stylesheet"
+    href="{{ $style.RelPermalink }}"
+    integrity="{{ $style.Data.Integrity }}">
+    

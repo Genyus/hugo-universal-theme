@@ -15,7 +15,7 @@
 		{{ end }}
 				<div class="col-md-4">
                     <div class="box-simple">
-                            <img class="" alt="" src="{{ .image | absURL }}" {{ if or (.image_2x) (.image_3x) }}srcset="{{ if .image_2x }}{{ .image_2x | absURL}} 2x{{ end }}{{ if and (.image_2x) (.image_3x) }}, {{ end }}{{ if .image_3x }}{{ .image_3x | absURL}} 3x{{ end }}"{{ end }} height="197" width="350" />
+                            <img class="" alt="" src="{{ .image | absURL }}" {{ if or (.image_2x) (.image_3x) }}srcset="{{ if .image_2x }}{{ .image_2x | absURL}} 2x{{ end }}{{ if and (.image_2x) (.image_3x) }}, {{ end }}{{ if .image_3x }}{{ .image_3x | absURL}} 3x{{ end }}"{{ end }} />
                         <h3>{{ $element.name }}</h3>
                         <p>{{ $element.description | markdownify }}</p>
                     </div>

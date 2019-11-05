@@ -81,6 +81,18 @@
   min-height: 16em;
 }
 
+.cta {
+  background: #38a7bb;
+  color: #fff;
+  padding: 50px 0;
+}
+
+.cta h3 {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin:0
+}
+
 @media (max-width: 375px) {
   .bar.hero h1 {
     font-size: 4.5em;

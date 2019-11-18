@@ -1,4 +1,7 @@
 /* your styles go here */
+body {
+  font-size: 16px;
+}
 
 .box-image-text .image {
   min-height: 200px;
@@ -55,6 +58,10 @@
   max-width: 100%;
 }
 
+.navbar ul.nav > li > a {
+  text-decoration: none;
+}
+
 #heading-breadcrumbs {
   padding: 20px 0 0;
   position: relative;
@@ -71,9 +78,9 @@
 }
 
 #heading-breadcrumbs h1 {
-  bottom: -0.5em;
+  bottom: -0.61em;
   color: #fff;
-  font-size: 5em;
+  font-size: 3.5em;
   position: relative;
 }
 
@@ -81,16 +88,40 @@
   min-height: 16em;
 }
 
-.cta {
+#content {
+  padding-bottom: 3em;
+}
+
+#cta {
   background: #38a7bb;
   color: #fff;
   padding: 50px 0;
 }
 
-.cta h3 {
+#cta h3 {
     text-transform: uppercase;
     letter-spacing: 0.1em;
+    line-height: 1.7;
     margin:0
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-collapse {
+    position: absolute;
+    z-index: 999;
+    background-color: rgb(255, 255, 255);
+    right: 0px;
+    width: 160px;
+  }
+}
+
+@media (max-width: 1199px) {
+  #cta .text-right, #cta h3 {
+    text-align: center;
+  }
+  #cta .btn {
+    margin-top: 2em;
+  }
 }
 
 @media (max-width: 375px) {
@@ -100,7 +131,10 @@
 }
 
 @media (max-width: 320px) {
-  .bar.hero h1 {
-    font-size: 4em;
+  .bar.hero h1, #heading-breadcrumbs h1 {
+    font-size: 3em;
+  }
+  #heading-breadcrumbs h1 {
+    bottom: -0.7em;
   }
 }
